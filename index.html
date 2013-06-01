@@ -10,18 +10,21 @@
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width">
 
+		<link href="http://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" type="text/css">
+
 		<link rel="stylesheet" href="css/fluid-baseline.css">
 		<link rel="stylesheet" href="css/skeleton.css">
 
 		<style>
 			footer {
-				background-color: red;
+				/*background-color: red;*/
 			}
 			nav {
-				background-color: green;
+				/*background-color: green;*/
 			}
 			section {
-				background-color: blue;
+				/*background-color: blue;*/
 			}
 
 			img {
@@ -29,30 +32,42 @@
 				margin: 0 1em 0 0;
 			}
 
-			nav a {
-				display: block;
+			.left {
+				float: left;
+			}
+			.right {
+				float: right;
 			}
 
-	    /* Note: Design for a width of 768px */
-	    @media only screen and (min-width: 768px) and (max-width: 959px) {
+			footer form input {
+				margin: 0;
+			}
+			footer {
+				height: 2em;
+			}
 
-	    }
+			/* Note: Design for a width of 768px */
+			@media only screen and (min-width: 768px) and (max-width: 959px) {
 
-	    /* Note: Design for a width of 480px */
-	    @media only screen and (max-width: 767px) {
+			}
+
+			/* Note: Design for a width of 480px */
+			@media only screen and (max-width: 767px) {
+				h1 {
+					text-align: center;
+				}
 				img {
 					float: none;
 					margin: 0 auto;
 					display: block;
-
 				}
-	    }
-	    @media only screen and (min-width: 480px) and (max-width: 767px) {
-	    }
+			}
+			@media only screen and (min-width: 480px) and (max-width: 767px) {
+			}
 
-	    /* Note: Design for a width of 320px */
-	    @media only screen and (max-width: 767px) {
-	    }
+			/* Note: Design for a width of 320px */
+			@media only screen and (max-width: 767px) {
+			}
 		</style>
 	
 	</head>
@@ -66,18 +81,20 @@
 			<header>
 			</header>
 
-			<h1 class="columns sixteen">h1.title</h1>
+			<h1 class="columns sixteen">dalrimple</h1>
 
-			<br class='clear' />
 
 			<nav class="columns four">
-				<a href="#">nav ul li a</a>
-				<a href="#">nav ul li a</a>
-				<a href="#">nav ul li a</a>
+				<a href="#">Posts</a>
+				<a href="#">About</a>
+				<a href="#">Contact</a>
 			</nav>
 
 			<section class="columns twelve">
-
+				<h2>Blog Post Title</h2>
+				<div>
+					Published <time datetime="2012-11-24">November 24<sup>th</sup>, 2012</time>
+				</div>
 				<p><img src="http://placekitten.com/556/300">Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat max brucks terribilem incessu zomby. The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered for solum oculi eorum defunctis go lum cerebro. Nescio brains an Undead zombies. Sicut malus putrid voodoo horror. Nigh tofth eliv ingdead.</p>
 
 				</p>Cum horribilem walking dead resurgere de crazed sepulcris creaturis, zombie sicut de grave feeding iride et serpens. Pestilentia, shaun ofthe dead scythe animated corpses ipsa screams. Pestilentia est plague haec decaying ambulabat mortuos. Sicut zeder apathetic malus voodoo. Aenean a dolor plan et terror soulless vulnerum contagium accedunt, mortui iam vivam unlife. Qui tardius moveri, brid eof reanimator sed in magna copia sint terribiles undeath legionis. Alii missing oculis aliorum sicut serpere crabs nostram. Putridi braindead odores kill and infect, aere implent left four dead.</p>
@@ -88,7 +105,19 @@
 		<div class="container">
 
 			<footer class="columns sixteen">
-					<h3>footer</h3>
+					
+					<div class="left">
+						Authored by: <a href="https://plus.google.com/101359289411683471326?
+	 rel=author">Daniel Zabinskas</a>
+					</div>
+
+					<form class="right" id="cse-search-box" action="http://google.com/cse">
+						<input type="hidden" name="cx" value="017565820478997907630:_whu7xvuwqw">
+						<input type="hidden" name="ie" value="UTF-8">
+						<input type="text" name="q" size="31">
+						<input type="submit" name="sa" value="Search">
+					</form>
+
 			</footer>
 
 		</div>
