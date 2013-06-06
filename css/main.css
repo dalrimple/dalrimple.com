@@ -1,0 +1,190 @@
+/* line 17, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* FIXING SOME FONT RENDERING ISSUES */
+/* line 4, ../sass/includes/_typography.scss */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+/* line 7, ../sass/includes/_typography.scss */
+body {
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* DEFAULT FONT SETTINGS */
+/* 16px base font size with 150% (24px) friendly, unitless line height and margin for vertical rhythm */
+/* Font-size percentage is based on 16px browser default size */
+/* line 17, ../sass/includes/_typography.scss */
+body, button, input, select, textarea {
+  font: 100%/1.5 "Source Sans Pro", Helvetica, sans-serif;
+  color: #333333;
+}
+
+/* line 21, ../sass/includes/_typography.scss */
+p, blockquote, q, pre, address, hr, code, samp, dl, ol, ul, form, table, fieldset, menu, img {
+  margin: 0 0 1.5em 0;
+  padding: 0;
+}
+
+/* Composed to a scale of 12px, 14px, 16px, 18px, 21px, 24px, 36px, 48px, 60px and 72px */
+/* line 26, ../sass/includes/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Source Code Pro', 'Source Sans Pro', Helvetica, sans-serif;
+  color: #222222;
+  font-weight: 200;
+}
+
+/* line 31, ../sass/includes/_typography.scss */
+h1 {
+  /* 60px / 72px */
+  margin: 0;
+  font-size: 3.75em;
+  line-height: 1.2em;
+  margin-bottom: 0.4em;
+}
+
+/* line 37, ../sass/includes/_typography.scss */
+h2 {
+  /* 48px / 48px */
+  margin: 0;
+  font-size: 3em;
+  line-height: 1em;
+  margin-bottom: 0.5em;
+}
+
+/* line 43, ../sass/includes/_typography.scss */
+h3 {
+  /* 36px / 48px */
+  margin: 0;
+  font-size: 2.25em;
+  line-height: 1.3333333333333333333333333333333em;
+  margin-bottom: 0.6667em;
+}
+
+/* line 49, ../sass/includes/_typography.scss */
+h4 {
+  /* 24px / 24px */
+  margin: 0;
+  font-size: 1.5em;
+  line-height: 1em;
+  margin-bottom: 1em;
+}
+
+/* line 55, ../sass/includes/_typography.scss */
+h5 {
+  /* 21px / 24px */
+  margin: 0;
+  font-size: 1.3125em;
+  line-height: 1.1428571428571428571428571428571em;
+  margin-bottom: 1.1428571428571428571428571428571em;
+}
+
+/* line 61, ../sass/includes/_typography.scss */
+h6 {
+  /* 18px / 24px */
+  margin: 0;
+  font-size: 1.125em;
+  line-height: 1.3333333333333333333333333333333em;
+  margin-bottom: 1.3333333333333333333333333333333em;
+}
+
+/* line 67, ../sass/includes/_typography.scss */
+p, ul, blockquote, pre, td, th, label {
+  /* 16px / 24px */
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+/* line 73, ../sass/includes/_typography.scss */
+small, p.small {
+  /* 14px / 24px */
+  margin: 0;
+  font-size: 0.875em;
+  line-height: 1.7142857142857142857142857142857em;
+  margin-bottom: 1.7142857142857142857142857142857em;
+}
+
+/* CODE */
+/* line 80, ../sass/includes/_typography.scss */
+pre {
+  /* Allow line wrapping of 'pre' */
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* line 86, ../sass/includes/_typography.scss */
+pre, code, kbd, samp {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-bottom: 1.5em;
+  font-family: 'Source Code Pro', monospace;
+}
