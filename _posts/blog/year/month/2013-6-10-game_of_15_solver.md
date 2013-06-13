@@ -7,7 +7,7 @@ tags: [code]
 
 ---
 
-##Summary
+##TL;DR
 Lately I've been watching an iTunes U computer science course; [CS50 from Harvard University][cs50]. Not only is [David J. Malan][david malan] an excellent lecturer, but it's free! Thank you internet. Anyway, as part of the course, one of the exercises set was to solve the [game of fifteen][puzzle15 wikipedia] so I decided to have a crack at writing a solver in javascript.
 
 The result can be found here <http://15puzzle.dalrimple.com>. It's a single page of html, css and javascript. Check out the [github repo][github repo] for fully annotated code.

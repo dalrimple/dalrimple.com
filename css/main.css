@@ -467,56 +467,61 @@ nav a.h3, nav a.h4, nav a.h5, nav span.h3, nav span.h4, nav span.h5 {
 .post .meta {
   margin-bottom: 1.5em;
 }
+/* line 42, ../_sass/includes/_general.scss */
+.post .meta a {
+  display: block;
+  float: right;
+}
 
 @media only screen and (max-width: 480px) {
-  /* line 47, ../_sass/includes/_general.scss */
+  /* line 51, ../_sass/includes/_general.scss */
   header, nav, .content, footer {
     padding: 0 16px 0 16px;
   }
 
-  /* line 50, ../_sass/includes/_general.scss */
+  /* line 54, ../_sass/includes/_general.scss */
   body {
     font-size: 100%;
   }
 }
 @media only screen and (min-width: 480px) {
-  /* line 58, ../_sass/includes/_general.scss */
+  /* line 62, ../_sass/includes/_general.scss */
   body {
     font-size: 116.75%;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 768px) {
-  /* line 65, ../_sass/includes/_general.scss */
+  /* line 69, ../_sass/includes/_general.scss */
   header, nav, .content, footer {
     padding: 0 24px 0 24px;
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 72, ../_sass/includes/_general.scss */
+  /* line 76, ../_sass/includes/_general.scss */
   .content, footer {
     width: 720px;
     padding: 0 24px 0 24px;
     margin: 0 auto 0 auto;
   }
 }
-/* line 80, ../_sass/includes/_general.scss */
+/* line 84, ../_sass/includes/_general.scss */
 footer {
   text-align: center;
   font-size: 0.8em;
   background-color: white;
   color: #c9c9c9;
 }
-/* line 85, ../_sass/includes/_general.scss */
+/* line 89, ../_sass/includes/_general.scss */
 footer form {
   display: inline-block;
   margin-left: 2em;
 }
-/* line 88, ../_sass/includes/_general.scss */
+/* line 92, ../_sass/includes/_general.scss */
 footer form input {
   margin: 0;
   padding: 0;
 }
-/* line 92, ../_sass/includes/_general.scss */
+/* line 96, ../_sass/includes/_general.scss */
 footer form input[type=text] {
   border: 1px solid #c9c9c9;
   padding: 0 0.15em;
@@ -525,7 +530,7 @@ footer form input[type=text] {
   box-shadow: none;
   border-radius: 0;
 }
-/* line 100, ../_sass/includes/_general.scss */
+/* line 104, ../_sass/includes/_general.scss */
 footer form input[type=submit] {
   border: none;
   background: none;
@@ -538,22 +543,22 @@ footer form input[type=submit] {
   text-decoration: underline;
 }
 
-/* line 113, ../_sass/includes/_general.scss */
+/* line 117, ../_sass/includes/_general.scss */
 ul, li {
   list-style-type: disc;
 }
 
-/* line 116, ../_sass/includes/_general.scss */
+/* line 120, ../_sass/includes/_general.scss */
 ol, li {
   list-style-type: decimal;
 }
 
-/* line 119, ../_sass/includes/_general.scss */
+/* line 123, ../_sass/includes/_general.scss */
 ul li, ol li {
   margin-left: 2em;
 }
 
-/* line 122, ../_sass/includes/_general.scss */
+/* line 126, ../_sass/includes/_general.scss */
 hr {
   border: none;
   height: 0px;

@@ -2,9 +2,11 @@
 
 		<div class="content post clearfix">
 			
+			
 			<h1 class="posttitle">{{ page.title }}</h1>
 			
 			<div class='meta'>
+				<a href="/" title="Return home">Home</a> 
 				Published <time datetime="{{ page.date | date: "%F" }}">{{ page.date | date: "%B" }} {{ page.date | date: "%d" | times:1 }}<sup>{% include datesuffix.html %}</sup>, {{ page.date | date: "%Y" }}</time>
 			</div>
 

@@ -39,6 +39,10 @@ nav {
 .post {
 	.meta {
 		margin-bottom: 1.5em;
+		a {
+			display: block;
+			float: right;
+		}
 	}
 }
 
