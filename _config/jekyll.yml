@@ -18,6 +18,11 @@ permalink:     /blog/:year/:month/:title.html
 paginate_path: 'page:num'
 titleprefix:   'Daniel Zabinskas - '
 
+# Used by the feed.xml rss generator
+name:          'dalrimple'
+description:   'The thoughts and work of Daniel Zabinskas'
+url:           'http://dalrimple.com'
+
 # markdown:      maruku
 # markdown_ext:  markdown,mkd,mkdn,md
 # textile_ext:   textile

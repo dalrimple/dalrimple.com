@@ -17,7 +17,7 @@ body, button, input, select, textarea {
 	color: $textColor;
 }
 a {
-	color: $farColor;
+	color: $backColor;
 }
 em {
 	font-style: italic;
@@ -38,24 +38,14 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 h1, .h1 { /* 48px / 48px */
 	font-size: 3em;
 	line-height: 1em;
-	margin-bottom: 0.5em;
+	// margin-bottom: 0.5em;
 }
-h2, .h2 { /* 36px / 48px */
-	font-size: 2.25em;
-	line-height: 1.3333333333333333333333333333333em;
-	// margin-bottom: 0.6667em;
-} 
-h3, .h3 { /* 24px / 24px */
+h2, .h2 {
 	font-size: 1.5em;
 	line-height: 1em;
 	// margin-bottom: 1em;
 }
-h4, .h4 { /* 21px / 24px */
-	font-size: 1.3125em;
-	line-height: 1.1428571428571428571428571428571em;
-	// margin-bottom: 1.1428571428571428571428571428571em;
-}
-h5, .h5, h6, .h6 { /* 18px / 24px */
+h3, .h3, h4, .h4, h5, .h5, h6, .h6 { /* 18px / 24px */
 	font-size: 1.125em;
 	line-height: 1.3333333333333333333333333333333em;
 	// margin-bottom: 1.3333333333333333333333333333333em;
@@ -64,22 +54,7 @@ h5, .h5, h6, .h6 { /* 18px / 24px */
 	h1, .h1 { /* 36px / 48px */
 		font-size: 2.25em;
 		line-height: 1.3333333333333333333333333333333em;
-		margin-bottom: 0.6667em;
-	} 
-	h2, .h2 { /* 24px / 24px */
-		font-size: 1.5em;
-		line-height: 1em;
-		// margin-bottom: 1em;
-	}
-	h3, .h3 { /* 21px / 24px */
-		font-size: 1.3125em;
-		line-height: 1.1428571428571428571428571428571em;
-		// margin-bottom: 1.1428571428571428571428571428571em;
-	}
-	h4, .h4 { /* 18px / 24px */
-		font-size: 1.125em;
-		line-height: 1.3333333333333333333333333333333em;
-		// margin-bottom: 1.3333333333333333333333333333333em;
+		// margin-bottom: 0.6667em;
 	}
 }
 

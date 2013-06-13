@@ -1,13 +1,13 @@
 {% include header.html %}
 
-		<div class="content clearfix">
+		<div class="content blog clearfix">
 		{{ content }}
 
 		<hr>
 
 		{% for post in site.posts %}
 			<article class="clearfix">
-				<h2>{{ post.title }}</a></h2>
+				<h1>{{ post.title }}</a></h1>
 				<div class="meta">
 					Published <time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B" }} {{ post.date | date: "%d" | remove_first: "0" }}<sup>{% include datesuffix.html %}</sup>, {{ post.date | date: "%Y" }}</time>
 					<!--div class="right">

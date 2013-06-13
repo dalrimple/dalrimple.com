@@ -1,6 +1,6 @@
 ---
 title: Blog  
-layout: home  
+layout: blog  
 nav:  
   weight: 10  
   title: Blog  

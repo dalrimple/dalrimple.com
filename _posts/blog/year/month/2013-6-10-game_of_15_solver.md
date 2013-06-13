@@ -7,7 +7,7 @@ tags: [code]
 
 ---
 
-##TL;DR
+##Summary
 Lately I've been watching an iTunes U computer science course; [CS50 from Harvard University][cs50]. Not only is [David J. Malan][david malan] an excellent lecturer, but it's free! Thank you internet. Anyway, as part of the course, one of the exercises set was to solve the [game of fifteen][puzzle15 wikipedia] so I decided to have a crack at writing a solver in javascript.
 
 The result can be found here <http://15puzzle.dalrimple.com>. It's a single page of html, css and javascript. Check out the [github repo][github repo] for fully annotated code.
@@ -90,8 +90,6 @@ With pathfinding worked out along with a method for solving each region, the nex
 
 ##Conclusion
 The code isn't particularly useful for any projects I can think of but the challenge was definitely worth it. I learn't quite a bit about structuring callbacks for animation and working out how to implement manual solutions into code.
-
-If you have any questions about this, please feel free to ping me an [email][contact]
 
 <!--Link references-->
 [cs50]: http://cs50.tv/2011/fall/ "Harvard CS50"
