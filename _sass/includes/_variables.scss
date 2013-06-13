@@ -1,0 +1,16 @@
+/* colors */
+$frontColor: #FFFFFF;
+$nearColor: #E2DBCC;
+$farColor: #CFC3AA;
+$backColor: #C8BA9C;
+
+$textColor: #787878;
+$textSubColor: mix($textColor, $frontColor, 35%);
+
+$fontBody: 'Source Sans Pro', Helvetica, sans-serif;
+$fontHeading: 'Source Sans Pro', Helvetica, sans-serif;
+$fontCode: 'Source Code Pro', monospace;
+
+/* responsive breakpoints */
+$screenlarge:	768px;
+$screensmall: 480px;

@@ -1,0 +1,130 @@
+/* FIXING SOME FONT RENDERING ISSUES */
+html {
+	-webkit-text-size-adjust: 100%;
+}
+body {
+	min-height: 100%;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+/* DEFAULT FONT SETTINGS */
+/* 16px base font size with 150% (24px) friendly, unitless line height and margin for vertical rhythm */
+/* Font-size percentage is based on 16px browser default size */
+body, button, input, select, textarea {
+	font: 100%/1.5 $fontBody;
+	color: $textColor;
+}
+a {
+	color: $farColor;
+}
+em {
+	font-style: italic;
+}
+strong {
+	font-weight: 700;
+}
+p, blockquote, q, pre, address, hr, code, samp, dl, ol, ul, form, table, fieldset, menu, img {
+	margin: 0 0 1.5em 0;
+	padding: 0;
+}
+/* Composed to a scale of 12px, 14px, 16px, 18px, 21px, 24px, 36px, 48px, 60px and 72px */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+	font-family: $fontHeading;
+	color: $textColor;
+	font-weight: 900;
+}
+h1, .h1 { /* 48px / 48px */
+	font-size: 3em;
+	line-height: 1em;
+	margin-bottom: 0.5em;
+}
+h2, .h2 { /* 36px / 48px */
+	font-size: 2.25em;
+	line-height: 1.3333333333333333333333333333333em;
+	// margin-bottom: 0.6667em;
+} 
+h3, .h3 { /* 24px / 24px */
+	font-size: 1.5em;
+	line-height: 1em;
+	// margin-bottom: 1em;
+}
+h4, .h4 { /* 21px / 24px */
+	font-size: 1.3125em;
+	line-height: 1.1428571428571428571428571428571em;
+	// margin-bottom: 1.1428571428571428571428571428571em;
+}
+h5, .h5, h6, .h6 { /* 18px / 24px */
+	font-size: 1.125em;
+	line-height: 1.3333333333333333333333333333333em;
+	// margin-bottom: 1.3333333333333333333333333333333em;
+}
+@media only screen and (max-width: $screensmall) {
+	h1, .h1 { /* 36px / 48px */
+		font-size: 2.25em;
+		line-height: 1.3333333333333333333333333333333em;
+		margin-bottom: 0.6667em;
+	} 
+	h2, .h2 { /* 24px / 24px */
+		font-size: 1.5em;
+		line-height: 1em;
+		// margin-bottom: 1em;
+	}
+	h3, .h3 { /* 21px / 24px */
+		font-size: 1.3125em;
+		line-height: 1.1428571428571428571428571428571em;
+		// margin-bottom: 1.1428571428571428571428571428571em;
+	}
+	h4, .h4 { /* 18px / 24px */
+		font-size: 1.125em;
+		line-height: 1.3333333333333333333333333333333em;
+		// margin-bottom: 1.3333333333333333333333333333333em;
+	}
+}
+
+p, ul, blockquote, pre, td, th, label { /* 16px / 24px */
+	margin: 0;
+	font-size: 1em;
+	line-height: 1.5em;
+	margin-bottom: 1.5em;
+}
+small, p.small { /* 14px / 24px */
+	margin: 0;
+	font-size: 0.875em;
+	line-height: 1.7142857142857142857142857142857em;
+	margin-bottom: 1.7142857142857142857142857142857em;
+}
+sub, sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	top: -0.5em;
+}
+sub {
+	bottom: -0.25em;
+}
+/* CODE */
+pre {
+	overflow: scroll;
+	&.wrap { /* Allow line wrapping of 'pre' if required */
+		white-space: pre;
+		white-space: pre-wrap;
+		word-wrap:
+		break-word;
+	}
+}
+pre, code, kbd, samp {
+	font-size: 1em;
+	line-height: 1.5em;
+	margin-bottom: 1.5em;
+	font-family: $fontCode;
+}
+code { /* Balance the monospace font size without effecting vertical rythmn */
+	font-size: 0.8em;
+	line-height: 1.875em;
+	margin-bottom: 1.875em;
+}

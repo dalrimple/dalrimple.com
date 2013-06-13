@@ -1,0 +1,99 @@
+/*
+Endless scrolling animation of the trees in the header 
+*/
+@mixin headerAnimation($keyframeName, $duration) {
+	-webkit-animation: $keyframeName $duration linear infinite;
+	-moz-animation: $keyframeName $duration linear infinite;
+	-o-animation: $keyframeName $duration linear infinite;
+	animation: $keyframeName $duration linear infinite;
+}
+
+@mixin keyframesFromTo($name, $property, $fromValue, $toValue) {
+	$prefix: webkit;
+	@-webkit-keyframes $name {
+		from {-webkit-#{$prefix}-#{$property}: $fromValue;}
+		to {-webkit-#{$property}: $toValue;}
+	}
+	@-moz-keyframes $name {
+		from {-moz-#{$property}: $fromValue;}
+		to {-moz-#{$property}: $toValue;}
+	}
+	@-o-keyframes $name {
+		from {-o-#{$property}: $fromValue;}
+		to {-o-#{$property}: $toValue;}
+	}
+	@keyframes $name {
+		from {#{$property}: $fromValue;}
+		to {#{$property}: $toValue;}
+	}
+}
+
+@include keyframesFromTo(slide, transform, translate(0px, 0), translate(-1220px, 0));
+@include keyframesFromTo(slideSmall, transform, translate(0px, 0), translate(-610px, 0));
+$headerHeight: 300px;
+header {
+	text-align: center;
+	overflow: hidden;
+	position: relative;
+	height: $headerHeight;
+	background-color: $backColor;
+	margin-bottom: 1em;
+	.trees {
+		height: $headerHeight;
+		width: 3660px;
+		position: absolute;
+		top:0;
+		left:0;
+	}
+	.far {
+		background-image: url(../img/ui/trees-far.png);
+		@include headerAnimation(slide, 160s);
+	}
+	.near {
+		background-image: url(../img/ui/trees-near.png);
+		@include headerAnimation(slide, 120s);
+	}
+	.front {
+		background-image: url(../img/ui/trees-front.png);
+		@include headerAnimation(slide, 80s);
+		/*
+		background-color: $frontColor;
+		-webkit-mask-image: url(../img/ui/trees-near.png);
+		-webkit-transition-property: background-color; 
+		-webkit-transition-duration: 2s; 
+		-webkit-transition-timing-function: ease-in-out;
+		*/
+	}	
+	h1 {
+		position: relative;
+		width: 100%;
+		color: $frontColor;
+		height: $headerHeight;
+		line-height: $headerHeight;
+		font-weight: 400;
+		font-family: $fontCode;
+	}
+}
+
+@media only screen and (max-width: $screensmall) {
+	header {
+		height: $headerHeight / 2;
+		.trees {
+			width: 1830px;
+			background-size: auto $headerHeight / 2;
+		}
+		.far {
+			@include headerAnimation(slideSmall, 160s);
+		}
+		.near {
+			@include headerAnimation(slideSmall, 120s);
+		}
+		.front {
+			@include headerAnimation(slideSmall, 80s);
+		}
+		h1 {
+			height: $headerHeight / 2;
+			line-height: $headerHeight / 2;
+		}
+	}
+}

@@ -1,0 +1,11 @@
+/* humanstxt.org */
+/* TEAM */
+Author: Daniel Zabinskas
+Site: http://dalrimple.com
+Twitter: @dalrimple
+Location: Melbourne, Australia
+ 
+/* SITE */
+Standards: HTML5, CSS3
+Software: Jekyll, Compass, Sublime Text 2
+Typography CSS: Fluid Baseline Grid v1.0.0 Designed & Built by Josh Hopkins and 40 Horse, http://40horse.com
