@@ -1,0 +1,34 @@
+{% capture debug %}
+	
+	{% comment %}
+		/*
+		 * This simply looks for the day portion of the page date
+		 * and returns "st", "nd", "rd" or "th". ie, if the date
+		 * is 2012-11-01 "st" is returned so you can output Nov 1st
+		 *
+		 * It looks for a post.date value from a {for post in site.posts}
+		 * loop or similar. If that isn't found, it just looks the page.date
+		 *
+		 */
+	{% endcomment %}
+
+	{% if post.date | date: "%d" != empty %}
+		post.date: {{ post.date | date: "%F" }}
+		{% capture suffixDay %}{{ post.date | date: "%d" }}{% endcapture %}
+	{% else %}
+		page.date: {{ page.date | date: "%F" }}
+		{% capture suffixDay %}{{ page.date | date: "%d" }}{% endcapture %}
+	{% endif %}
+		suffixDay: {{ suffixDay }}
+		{% case suffixDay %}
+		{% when "01" or "21" or "31" %}
+			{% assign suffix = "st" %}
+		{% when "02" or "22" %}
+			{% assign suffix = "nd" %}
+		{% when "03" or "23" %}
+			{% assign suffix = "rd" %}
+		{% else %}
+			{% assign suffix = "th" %}
+		{% endcase %}
+		suffix: {{ suffix }}
+{% endcapture %}{{ suffix }}

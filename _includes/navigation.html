@@ -1,0 +1,66 @@
+{% capture debug %}
+			
+			{% comment %}
+			/*
+			 * This is horribly unreadable but neccessary due to the 
+			 * limitations of the liquid templating engine.
+			 * 
+			 * It takes the properties navWeight, url and title from each page in the pages array
+			 * and uses string concatenatin and filters to sort these properties on the navWeight
+			 * value. The navSortDelim and navSortPropDelim define delimiters used in the string
+			 * concatenation and can be replaced in the unlikely chance that the defaults might
+			 * occur in the actual title of any of the pages. It also checks against the page's
+			 * current url to create an non-link entry.
+			 * The final output takes the format:
+			 *   <nav>
+			 *     <span>title</span>
+			 *     <a href="url" title="title">title</a>
+			 *   </nav>
+			 * The html tags in the template are easy to identify and edit if needed.
+			 *
+			 * The first capture of debug stops uncontrolled whitespace from polluting
+			 * the final output. This also allows easy debugging; simply replace the last 
+			 * {{ navSortOutput }} with {{ debug }} to see all the debug output.
+			 *  
+			 */
+			{% endcomment %}
+			
+			{% capture navSortOutput %}{% endcapture %}
+			{% capture navSortDelim %}[--items--]{% endcapture %}
+			{% capture navSortPropDelim %}[--props--]{% endcapture %}
+
+			{% assign navSortFirstItem = true %}
+			{% capture navSortString %}{% for node in site.pages %}{% if node.nav != null and node.nav != empty %}{% if navSortFirstItem != true %}{{ navSortDelim }}{% endif %}{% assign navSortFirstItem = false %}{{ node.nav.weight }}{{ navSortPropDelim }}{{ node.url }}{{ navSortPropDelim }}{{ node.nav.title }}{% endif %}{% endfor %}{% endcapture %}
+
+			navSortString: {{ navSortString }}
+			{% capture navSortArray %}{{ navSortString | split:navSortDelim | sort | join:navSortDelim}}{% endcapture %}
+
+			{% capture navSortLength %}{{ navSortString | split:navSortDelim | size }}{% endcapture %}
+			navSortLength: {{ navSortLength }}
+
+			{% for navSortI in (1..navSortLength) %}
+				{% capture navSortFirstItem %}{{ navSortArray | split:navSortDelim | first }}{% endcapture %}
+				{% capture navSortArray %}{{ navSortArray | remove_first:navSortFirstItem | remove_first:navSortDelim }}{% endcapture %}
+				navSortFirstItem - {{ navSortI}}: {{ navSortFirstItem }}
+
+				{% capture navSortPropsLength %}{{ navSortFirstItem | split:navSortPropDelim | size }}{% endcapture %}
+				{% for navSortJ in (1..navSortPropsLength) %}
+					{% capture navSortFirstProp %}{{ navSortFirstItem | split:navSortPropDelim | first }}{% endcapture %}
+					{% capture navSortFirstItem %}{{ navSortFirstItem | remove_first:navSortFirstProp | remove_first:navSortPropDelim }}{% endcapture %}
+					navSortFirstProp - {{ navSortJ }}: {{ navSortFirstProp }}
+					{% case forloop.index0 %}
+					{% when 1 %}
+						{% capture navSortUrl %}{{ navSortFirstProp }}{% endcapture %}
+					{% when 2 %}
+						{% capture navSortTitle %}{{ navSortFirstProp }}{% endcapture %}
+					{% endcase %}
+				{% endfor %}
+				{% if navSortUrl == page.url %}
+				{% capture navSortOutput %}{{ navSortOutput }}
+			<span class="h4">{{ navSortTitle }}</span>{% endcapture %}
+				{% else %}
+				{% capture navSortOutput %}{{ navSortOutput }}
+			<a href="{{ navSortUrl }}" title="{{ navSortTitle }}" class="h4">{{ navSortTitle }}</a>{% endcapture %}
+				{% endif %}
+				navSortOutput: {{ navSortOutput }}
+			{% endfor %}{% endcapture %}{{ navSortOutput }}

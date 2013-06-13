@@ -63,13 +63,25 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
+/* line 1, ../_sass/includes/_clearfix.scss */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/* colors */
+/* responsive breakpoints */
 /* FIXING SOME FONT RENDERING ISSUES */
-/* line 4, ../sass/includes/_typography.scss */
+/* line 2, ../_sass/includes/_typography.scss */
 html {
   -webkit-text-size-adjust: 100%;
 }
 
-/* line 7, ../sass/includes/_typography.scss */
+/* line 5, ../_sass/includes/_typography.scss */
 body {
   min-height: 100%;
   -webkit-font-smoothing: antialiased;
@@ -80,81 +92,108 @@ body {
 /* DEFAULT FONT SETTINGS */
 /* 16px base font size with 150% (24px) friendly, unitless line height and margin for vertical rhythm */
 /* Font-size percentage is based on 16px browser default size */
-/* line 17, ../sass/includes/_typography.scss */
+/* line 15, ../_sass/includes/_typography.scss */
 body, button, input, select, textarea {
   font: 100%/1.5 "Source Sans Pro", Helvetica, sans-serif;
-  color: #333333;
+  color: #787878;
 }
 
-/* line 21, ../sass/includes/_typography.scss */
+/* line 19, ../_sass/includes/_typography.scss */
+a {
+  color: #cfc3aa;
+}
+
+/* line 22, ../_sass/includes/_typography.scss */
+em {
+  font-style: italic;
+}
+
+/* line 25, ../_sass/includes/_typography.scss */
+strong {
+  font-weight: 700;
+}
+
+/* line 28, ../_sass/includes/_typography.scss */
 p, blockquote, q, pre, address, hr, code, samp, dl, ol, ul, form, table, fieldset, menu, img {
   margin: 0 0 1.5em 0;
   padding: 0;
 }
 
 /* Composed to a scale of 12px, 14px, 16px, 18px, 21px, 24px, 36px, 48px, 60px and 72px */
-/* line 26, ../sass/includes/_typography.scss */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Source Code Pro', 'Source Sans Pro', Helvetica, sans-serif;
-  color: #222222;
-  font-weight: 200;
+/* line 33, ../_sass/includes/_typography.scss */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  color: #787878;
+  font-weight: 900;
 }
 
-/* line 31, ../sass/includes/_typography.scss */
-h1 {
-  /* 60px / 72px */
-  margin: 0;
-  font-size: 3.75em;
-  line-height: 1.2em;
-  margin-bottom: 0.4em;
-}
-
-/* line 37, ../sass/includes/_typography.scss */
-h2 {
+/* line 38, ../_sass/includes/_typography.scss */
+h1, .h1 {
   /* 48px / 48px */
-  margin: 0;
   font-size: 3em;
   line-height: 1em;
   margin-bottom: 0.5em;
 }
 
-/* line 43, ../sass/includes/_typography.scss */
-h3 {
+/* line 43, ../_sass/includes/_typography.scss */
+h2, .h2 {
   /* 36px / 48px */
-  margin: 0;
   font-size: 2.25em;
   line-height: 1.3333333333333333333333333333333em;
-  margin-bottom: 0.6667em;
 }
 
-/* line 49, ../sass/includes/_typography.scss */
-h4 {
+/* line 48, ../_sass/includes/_typography.scss */
+h3, .h3 {
   /* 24px / 24px */
-  margin: 0;
   font-size: 1.5em;
   line-height: 1em;
-  margin-bottom: 1em;
 }
 
-/* line 55, ../sass/includes/_typography.scss */
-h5 {
+/* line 53, ../_sass/includes/_typography.scss */
+h4, .h4 {
   /* 21px / 24px */
-  margin: 0;
   font-size: 1.3125em;
   line-height: 1.1428571428571428571428571428571em;
-  margin-bottom: 1.1428571428571428571428571428571em;
 }
 
-/* line 61, ../sass/includes/_typography.scss */
-h6 {
+/* line 58, ../_sass/includes/_typography.scss */
+h5, .h5, h6, .h6 {
   /* 18px / 24px */
-  margin: 0;
   font-size: 1.125em;
   line-height: 1.3333333333333333333333333333333em;
-  margin-bottom: 1.3333333333333333333333333333333em;
 }
 
-/* line 67, ../sass/includes/_typography.scss */
+@media only screen and (max-width: 480px) {
+  /* line 64, ../_sass/includes/_typography.scss */
+  h1, .h1 {
+    /* 36px / 48px */
+    font-size: 2.25em;
+    line-height: 1.3333333333333333333333333333333em;
+    margin-bottom: 0.6667em;
+  }
+
+  /* line 69, ../_sass/includes/_typography.scss */
+  h2, .h2 {
+    /* 24px / 24px */
+    font-size: 1.5em;
+    line-height: 1em;
+  }
+
+  /* line 74, ../_sass/includes/_typography.scss */
+  h3, .h3 {
+    /* 21px / 24px */
+    font-size: 1.3125em;
+    line-height: 1.1428571428571428571428571428571em;
+  }
+
+  /* line 79, ../_sass/includes/_typography.scss */
+  h4, .h4 {
+    /* 18px / 24px */
+    font-size: 1.125em;
+    line-height: 1.3333333333333333333333333333333em;
+  }
+}
+/* line 86, ../_sass/includes/_typography.scss */
 p, ul, blockquote, pre, td, th, label {
   /* 16px / 24px */
   margin: 0;
@@ -163,7 +202,7 @@ p, ul, blockquote, pre, td, th, label {
   margin-bottom: 1.5em;
 }
 
-/* line 73, ../sass/includes/_typography.scss */
+/* line 92, ../_sass/includes/_typography.scss */
 small, p.small {
   /* 14px / 24px */
   margin: 0;
@@ -172,19 +211,384 @@ small, p.small {
   margin-bottom: 1.7142857142857142857142857142857em;
 }
 
+/* line 98, ../_sass/includes/_typography.scss */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 104, ../_sass/includes/_typography.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 107, ../_sass/includes/_typography.scss */
+sub {
+  bottom: -0.25em;
+}
+
 /* CODE */
-/* line 80, ../sass/includes/_typography.scss */
+/* line 111, ../_sass/includes/_typography.scss */
 pre {
-  /* Allow line wrapping of 'pre' */
+  overflow: scroll;
+}
+/* line 113, ../_sass/includes/_typography.scss */
+pre.wrap {
+  /* Allow line wrapping of 'pre' if required */
   white-space: pre;
   white-space: pre-wrap;
   word-wrap: break-word;
 }
 
-/* line 86, ../sass/includes/_typography.scss */
+/* line 120, ../_sass/includes/_typography.scss */
 pre, code, kbd, samp {
   font-size: 1em;
   line-height: 1.5em;
   margin-bottom: 1.5em;
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
+}
+
+/* line 126, ../_sass/includes/_typography.scss */
+code {
+  /* Balance the monospace font size without effecting vertical rythmn */
+  font-size: 0.8em;
+  line-height: 1.875em;
+  margin-bottom: 1.875em;
+}
+
+/*
+Endless scrolling animation of the trees in the header 
+*/
+@-webkit-keyframes slide {
+  /* line 14, ../_sass/includes/_header.scss */
+  from {
+    -webkit-webkit-transform: translate(0px, 0);
+  }
+
+  /* line 15, ../_sass/includes/_header.scss */
+  to {
+    -webkit-transform: translate(-1220px, 0);
+  }
+}
+
+@-moz-keyframes slide {
+  /* line 18, ../_sass/includes/_header.scss */
+  from {
+    -moz-transform: translate(0px, 0);
+  }
+
+  /* line 19, ../_sass/includes/_header.scss */
+  to {
+    -moz-transform: translate(-1220px, 0);
+  }
+}
+
+@-o-keyframes slide {
+  /* line 22, ../_sass/includes/_header.scss */
+  from {
+    -o-transform: translate(0px, 0);
+  }
+
+  /* line 23, ../_sass/includes/_header.scss */
+  to {
+    -o-transform: translate(-1220px, 0);
+  }
+}
+
+@keyframes slide {
+  /* line 26, ../_sass/includes/_header.scss */
+  from {
+    transform: translate(0px, 0);
+  }
+
+  /* line 27, ../_sass/includes/_header.scss */
+  to {
+    transform: translate(-1220px, 0);
+  }
+}
+
+@-webkit-keyframes slideSmall {
+  /* line 14, ../_sass/includes/_header.scss */
+  from {
+    -webkit-webkit-transform: translate(0px, 0);
+  }
+
+  /* line 15, ../_sass/includes/_header.scss */
+  to {
+    -webkit-transform: translate(-610px, 0);
+  }
+}
+
+@-moz-keyframes slideSmall {
+  /* line 18, ../_sass/includes/_header.scss */
+  from {
+    -moz-transform: translate(0px, 0);
+  }
+
+  /* line 19, ../_sass/includes/_header.scss */
+  to {
+    -moz-transform: translate(-610px, 0);
+  }
+}
+
+@-o-keyframes slideSmall {
+  /* line 22, ../_sass/includes/_header.scss */
+  from {
+    -o-transform: translate(0px, 0);
+  }
+
+  /* line 23, ../_sass/includes/_header.scss */
+  to {
+    -o-transform: translate(-610px, 0);
+  }
+}
+
+@keyframes slideSmall {
+  /* line 26, ../_sass/includes/_header.scss */
+  from {
+    transform: translate(0px, 0);
+  }
+
+  /* line 27, ../_sass/includes/_header.scss */
+  to {
+    transform: translate(-610px, 0);
+  }
+}
+
+/* line 34, ../_sass/includes/_header.scss */
+header {
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  height: 300px;
+  background-color: #c8ba9c;
+  margin-bottom: 1em;
+}
+/* line 41, ../_sass/includes/_header.scss */
+header .trees {
+  height: 300px;
+  width: 3660px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 48, ../_sass/includes/_header.scss */
+header .far {
+  background-image: url(../img/ui/trees-far.png);
+  -webkit-animation: slide 160s linear infinite;
+  -moz-animation: slide 160s linear infinite;
+  -o-animation: slide 160s linear infinite;
+  animation: slide 160s linear infinite;
+}
+/* line 52, ../_sass/includes/_header.scss */
+header .near {
+  background-image: url(../img/ui/trees-near.png);
+  -webkit-animation: slide 120s linear infinite;
+  -moz-animation: slide 120s linear infinite;
+  -o-animation: slide 120s linear infinite;
+  animation: slide 120s linear infinite;
+}
+/* line 56, ../_sass/includes/_header.scss */
+header .front {
+  background-image: url(../img/ui/trees-front.png);
+  -webkit-animation: slide 80s linear infinite;
+  -moz-animation: slide 80s linear infinite;
+  -o-animation: slide 80s linear infinite;
+  animation: slide 80s linear infinite;
+  /*
+  background-color: $frontColor;
+  -webkit-mask-image: url(../img/ui/trees-near.png);
+  -webkit-transition-property: background-color; 
+  -webkit-transition-duration: 2s; 
+  -webkit-transition-timing-function: ease-in-out;
+  */
+}
+/* line 67, ../_sass/includes/_header.scss */
+header h1 {
+  position: relative;
+  width: 100%;
+  color: white;
+  height: 300px;
+  line-height: 300px;
+  font-weight: 400;
+  font-family: "Source Code Pro", monospace;
+}
+
+@media only screen and (max-width: 480px) {
+  /* line 79, ../_sass/includes/_header.scss */
+  header {
+    height: 150px;
+  }
+  /* line 81, ../_sass/includes/_header.scss */
+  header .trees {
+    width: 1830px;
+    background-size: auto 150px;
+  }
+  /* line 85, ../_sass/includes/_header.scss */
+  header .far {
+    -webkit-animation: slideSmall 160s linear infinite;
+    -moz-animation: slideSmall 160s linear infinite;
+    -o-animation: slideSmall 160s linear infinite;
+    animation: slideSmall 160s linear infinite;
+  }
+  /* line 88, ../_sass/includes/_header.scss */
+  header .near {
+    -webkit-animation: slideSmall 120s linear infinite;
+    -moz-animation: slideSmall 120s linear infinite;
+    -o-animation: slideSmall 120s linear infinite;
+    animation: slideSmall 120s linear infinite;
+  }
+  /* line 91, ../_sass/includes/_header.scss */
+  header .front {
+    -webkit-animation: slideSmall 80s linear infinite;
+    -moz-animation: slideSmall 80s linear infinite;
+    -o-animation: slideSmall 80s linear infinite;
+    animation: slideSmall 80s linear infinite;
+  }
+  /* line 94, ../_sass/includes/_header.scss */
+  header h1 {
+    height: 150px;
+    line-height: 150px;
+  }
+}
+/* line 2, ../_sass/includes/_general.scss */
+body {
+  background-color: white;
+}
+
+/* line 5, ../_sass/includes/_general.scss */
+nav {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+/* line 8, ../_sass/includes/_general.scss */
+nav a.h3, nav a.h4, nav a.h5, nav span.h3, nav span.h4, nav span.h5 {
+  text-decoration: none;
+  color: #c8ba9c;
+  font-weight: 400;
+  display: inline-block;
+  padding: 0 0.75em;
+}
+
+/* line 16, ../_sass/includes/_general.scss */
+.content {
+  -webkit-box-shadow: 0px 40px 40px rgba(200, 186, 156, 0.2);
+  -moz-box-shadow: 0px 40px 40px rgba(200, 186, 156, 0.2);
+  box-shadow: 0px 40px 40px rgba(200, 186, 156, 0.2);
+}
+/* line 26, ../_sass/includes/_general.scss */
+.content .meta {
+  color: #cfcfcf;
+}
+/* line 31, ../_sass/includes/_general.scss */
+.content img, .content iframe {
+  display: block;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.6em;
+}
+/* line 41, ../_sass/includes/_general.scss */
+.content iframe {
+  margin-bottom: 1.5em;
+}
+/* line 44, ../_sass/includes/_general.scss */
+.content pre {
+  border: 1px solid #eaeaea;
+  padding: 1em;
+  background-color: #fcfcfc;
+}
+
+@media only screen and (max-width: 480px) {
+  /* line 54, ../_sass/includes/_general.scss */
+  header, nav, .content, footer {
+    padding: 0 16px 0 16px;
+  }
+
+  /* line 57, ../_sass/includes/_general.scss */
+  body {
+    font-size: 100%;
+  }
+}
+@media only screen and (min-width: 480px) {
+  /* line 65, ../_sass/includes/_general.scss */
+  body {
+    font-size: 116.75%;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  /* line 72, ../_sass/includes/_general.scss */
+  header, nav, .content, footer {
+    padding: 0 24px 0 24px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* line 79, ../_sass/includes/_general.scss */
+  .content, footer {
+    width: 720px;
+    padding: 0 24px 0 24px;
+    margin: 0 auto 0 auto;
+  }
+}
+/* line 87, ../_sass/includes/_general.scss */
+footer {
+  text-align: center;
+  font-size: 0.8em;
+  background-color: white;
+  color: #cfcfcf;
+}
+/* line 92, ../_sass/includes/_general.scss */
+footer form {
+  display: inline-block;
+  margin-left: 2em;
+}
+/* line 95, ../_sass/includes/_general.scss */
+footer form input {
+  margin: 0;
+  padding: 0;
+}
+/* line 99, ../_sass/includes/_general.scss */
+footer form input[type=text] {
+  border: 1px solid #cfcfcf;
+  padding: 0 0.15em;
+  line-height: 0;
+  font-weight: lighter;
+  box-shadow: none;
+  border-radius: 0;
+}
+/* line 107, ../_sass/includes/_general.scss */
+footer form input[type=submit] {
+  border: none;
+  background: none;
+  display: inline;
+  -webkit-appearance: none;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: lighter;
+  color: #cfc3aa;
+  text-decoration: underline;
+}
+
+/* line 120, ../_sass/includes/_general.scss */
+ul, li {
+  list-style-type: disc;
+}
+
+/* line 123, ../_sass/includes/_general.scss */
+ol, li {
+  list-style-type: decimal;
+}
+
+/* line 126, ../_sass/includes/_general.scss */
+ul li, ol li {
+  margin-left: 2em;
+}
+
+/* line 129, ../_sass/includes/_general.scss */
+hr {
+  border: none;
+  height: 0px;
+  border-bottom: 1px solid #cfcfcf;
 }
