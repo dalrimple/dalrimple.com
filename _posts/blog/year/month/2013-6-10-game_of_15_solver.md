@@ -89,7 +89,8 @@ With pathfinding worked out along with a method for solving each region, the nex
 8. Call step 7 unless the grid is complete.
 
 ##Conclusion
-The code isn't particularly useful for any projects I can think of but the challenge was definitely worth it. I learn't quite a bit about structuring callbacks for animation and working out how to implement manual solutions into code.
+The code isn't particularly useful for any projects I can think of but the challenge was definitely worth it. I learn't quite a bit about structuring callbacks for animation and working out how to implement manual solutions into code.  
+<http://15puzzle.dalrimple.com>
 
 ##Some more references
 <http://mathworld.wolfram.com/15Puzzle.html>

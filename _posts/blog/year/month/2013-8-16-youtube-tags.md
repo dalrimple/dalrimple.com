@@ -18,3 +18,8 @@ So if you've got a similar requirement for your app your only options is to ask 
 
 #####End rant
 The tone of this article is probably unnecessarily short and sarcastic. But that's what happens when you spend 6 hours looking for why their service doesn't work as documented.
+
+#####References
+<http://apiblog.youtube.com/2012/08/video-tags-just-for-uploaders.html>  
+<https://developers.google.com/youtube/2.0/developers_guide_protocol_category_keyword_browsing>  
+<https://developers.google.com/youtube/2.0/developers_guide_protocol_api_query_parameters#qsp>  
