@@ -91,6 +91,9 @@ With pathfinding worked out along with a method for solving each region, the nex
 ##Conclusion
 The code isn't particularly useful for any projects I can think of but the challenge was definitely worth it. I learn't quite a bit about structuring callbacks for animation and working out how to implement manual solutions into code.
 
+##Some more references
+<http://mathworld.wolfram.com/15Puzzle.html>
+
 <!--Link references-->
 [cs50]: http://cs50.tv/2011/fall/ "Harvard CS50"
 [david malan]: http://cs.harvard.edu/malan/ "David J. Malan"
